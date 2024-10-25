@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 101%; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow-y: auto;
+}
+
+.photo-card {
+  width: 48%; /* Make each photo card take full width of the grid item */
+  padding: 30px;
+}
+
+img {
+  width: 300px; /* Make the image take full width of the photo card */
+  height: auto; /* Fixed height for the images */
+  object-fit: cover; /* Ensure the image covers the area */
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s;
+  border-radius: 10%;
+}
+
+.photos-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+  justify-items: center; /* Center items within the grid */
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .photos-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .photos-container {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+}

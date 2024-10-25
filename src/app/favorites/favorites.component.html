@@ -1,0 +1,8 @@
+<div class="photos-container">
+  <div class="photo-card" *ngFor="let photo of favorites()">
+  <img
+       [src]="getImageUrl(photo)"
+       (click)="goToDetail(photo)"
+       alt="Favorite Photo">
+  </div>
+</div>

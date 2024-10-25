@@ -1,0 +1,8 @@
+<div class="photo-detail-container" *ngIf="photo">
+  <img [src]="photo.url" alt="Detailed Photo" />
+  <button mat-raised-button color="warn" (click)="removeFromFavorites()">Remove from Favorites</button>
+</div>
+
+<div *ngIf="!photo">
+  <p>Photo not found!</p>
+</div>

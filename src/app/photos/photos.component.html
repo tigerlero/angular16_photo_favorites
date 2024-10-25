@@ -1,0 +1,13 @@
+<div *ngIf="loading" class="loader-container">
+  <mat-progress-spinner
+    mode="indeterminate"
+    diameter="120"
+    color="primary">
+  </mat-progress-spinner>
+</div>
+
+<div class="photos-container">
+  <div class="photo-card" *ngFor="let photo of photos">
+    <img [src]="photo.url" (click)="addToFavorites(photo)" [alt]="photo.title">
+  </div>
+</div>
